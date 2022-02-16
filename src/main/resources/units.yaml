@@ -1,0 +1,196 @@
+conf:
+  - name: mass
+    nameCn: 质量
+    code: m
+    convertDefault: mg
+    units:
+      - name: milligram
+        nameCn: 毫克
+        symbol: mg
+        convertExp: val
+        convertReverseExp: val
+      - name: gram
+        nameCn: 克
+        symbol: g
+        convertExp: 1000 * val
+        convertReverseExp: 0.001 * val
+      - name: kilogram
+        nameCn: 千克
+        symbol: kg
+        convertExp: 1000 * 1000 * val
+        convertReverseExp: 0.000001 * val
+      - name: ton
+        nameCn: 吨
+        symbol: t
+        convertExp: 1000 * 1000 * 1000 * val
+        convertReverseExp: 0.000000001 * val
+      - name: jin
+        nameCn: 市斤|斤
+        symbol: jin
+        convertExp: 500000 * val
+        convertReverseExp: 0.000002 * val
+      - name: dan
+        nameCn: 担
+        symbol: dan
+        convertExp: 50000000 * val
+        convertReverseExp: 2e-8 * val
+      - name: liang
+        nameCn: 两
+        symbol: liang
+        convertExp: 50000 * val
+        convertReverseExp: 0.00002 * val
+      - name: qian
+        nameCn: 钱
+        symbol: qian
+        convertExp: 5000 * val
+        convertReverseExp: 0.0002 * val
+      - name: pennyweight
+        nameCn: 英钱
+        symbol: dwt
+        convertExp: 1360.77711 * val
+        convertReverseExp: 0.00073487 * val
+      - name: hundredweight
+        nameCn: 英担
+        symbol: cwt
+        convertExp: 50802345.44 * val
+        convertReverseExp: 2e-8 * val
+      - name: stone
+        nameCn: 英石
+        symbol: st
+        convertExp: 6350293.18 * val
+        convertReverseExp: 1.6e-7 * val
+      - name: pound
+        nameCn: 英磅|磅
+        symbol: lb
+        convertExp: 453592.37 * val
+        convertReverseExp: 0.0000022 * val
+      - name: ounce
+        nameCn: 盎司
+        symbol: oz
+        convertExp: 428349.523125 * val
+        convertReverseExp: 0.00003527 * val
+      - name: dram
+        nameCn: 打兰
+        symbol: dr
+        convertExp: 1771.84519531 * val
+        convertReverseExp: 0.00056438 * val
+      - name: grain
+        nameCn: 格令
+        symbol: gr
+        convertExp: 56.69904625 * val
+        convertReverseExp: 0.01763698 * val
+  - name: distance|length
+    nameCn: 距离|长度
+    code: d
+    convertDefault: mm
+    units:
+      - name: kilometer
+        nameCn: 千米
+        symbol: km
+        convertExp: 1000000 * val
+        convertReverseExp: 0.000001 * val
+      - name: meter
+        nameCn: 米
+        symbol: m
+        convertExp: 1000 * val
+        convertReverseExp: 0.001 * val
+      - name: decimetre
+        nameCn: 分米
+        symbol: dm
+        convertExp: 100 * val
+        convertReverseExp: 0.01 * val
+      - name: centimeter
+        nameCn: 厘米
+        symbol: cm
+        convertExp: 10 * val
+        convertReverseExp: 0.1 * val
+      - name: micrometer|micron
+        nameCn: 毫米
+        symbol: mm
+        convertExp: val
+        convertReverseExp: val
+      - name: micrometer
+        nameCn: 微米
+        symbol: um
+        convertExp: 0.001 * val
+        convertReverseExp: 1000 * val
+      - name: li
+        nameCn: 里
+        symbol: li
+        convertExp: 500000 * val
+        convertReverseExp: 0.000002 * val
+      - name: zhang
+        nameCn: 丈
+        symbol: zhang
+        convertExp: 3333 * val
+        convertReverseExp: 0.00030003 * val
+      - name: chi
+        nameCn: 尺
+        symbol: chi
+        convertExp: 333.3 * val
+        convertReverseExp: 0.0030003 * val
+      - name: cun
+        nameCn: 寸
+        symbol: cun
+        convertExp: 33.33 * val
+        convertReverseExp: 0.030003 * val
+      - name: fen
+        nameCn: 分
+        symbol: fen
+        convertExp: 3.333 * val
+        convertReverseExp: 0.30003 * val
+      - name: li
+        nameCn: 厘
+        symbol: li
+        convertExp: 0.3333 * val
+        convertReverseExp: 3.00030003 * val
+      - name: nautical mile
+        nameCn: 海里
+        symbol: nmi
+        convertExp: 1852000 * val
+        convertReverseExp: 5.4e-7 * val
+      - name: fathom
+        nameCn: 英寻|浔
+        symbol: fathom
+        convertExp: 1828.8 * val
+        convertReverseExp: 0.00054681 * val
+      - name: mile
+        nameCn: 英里
+        symbol: mi
+        convertExp: 1609344 * val
+        convertReverseExp: 6.2e-7 * val
+      - name: furlong
+        nameCn: 弗隆
+        symbol: fur
+        convertExp: 201168 * val
+        convertReverseExp: 0.00000497 * val
+      - name: yard
+        nameCn: 码
+        symbol: yd
+        convertExp: 914.4 * val
+        convertReverseExp: 0.00109361 * val
+      - name: feet
+        nameCn: 英尺
+        symbol: ft
+        convertExp: 304.8 * val
+        convertReverseExp: 0.00328084 * val
+      - name: inch
+        nameCn: 英寸
+        symbol: in
+        convertExp: 25.4 * val
+        convertReverseExp: 0.03937008 * val
+  - name: temperature
+    nameCn: 温度
+    code: t
+    convertDefault: °C
+    units:
+      - name: centigrade
+        nameCn: 摄氏度
+        symbol: °C
+        convertExp: val
+        convertReverseExp: val
+      - name: fahrenheit
+        nameCn: 华氏度
+        symbol: °F
+        convertExp: (val - 32) / 1.8
+        convertReverseExp: 32 + val * 1.8
