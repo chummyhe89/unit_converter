@@ -71,7 +71,7 @@ public class UnitConverter {
         if(unitVOMap != null) {
             UnitVO unitVO = unitVOMap.get(normStr(unitSrc));
             String destUnit = unitVO.getConvertDefault();
-            UnitVO destUnitVO = unitVOMap.get(destUnit);
+            UnitVO destUnitVO = unitVOMap.get(normStr(destUnit));
             Expression exp = unitVO.getExpression();
             Map<String,Object> params = ImmutableMap.<String,Object>of("val",val);
             Double destVal = (Double) exp.execute(params);
@@ -108,7 +108,7 @@ public class UnitConverter {
     }
 
     public static void main(String[] args) {
-        ConvertRetVO ret = UnitConverter.convert("mass",1.0,"t","kg");
+        ConvertRetVO ret = UnitConverter.convert("mass",1.0,"kg","cwt");
         System.out.println(ret);
     }
 }

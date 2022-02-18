@@ -26,22 +26,22 @@ conf:
         convertReverseExp: 0.000000001 * val
       - name: jin
         nameCn: 市斤|斤
-        symbol: jin
+        symbol: 斤
         convertExp: 500000 * val
         convertReverseExp: 0.000002 * val
       - name: dan
         nameCn: 担
-        symbol: dan
+        symbol: 担
         convertExp: 50000000 * val
         convertReverseExp: 2e-8 * val
       - name: liang
         nameCn: 两
-        symbol: liang
+        symbol: 两
         convertExp: 50000 * val
         convertReverseExp: 0.00002 * val
       - name: qian
         nameCn: 钱
-        symbol: qian
+        symbol: 钱
         convertExp: 5000 * val
         convertReverseExp: 0.0002 * val
       - name: pennyweight
@@ -114,34 +114,34 @@ conf:
         symbol: um
         convertExp: 0.001 * val
         convertReverseExp: 1000 * val
-      - name: li
-        nameCn: 里
-        symbol: li
+      - name: 里
+        nameCn: 里|市里|华里
+        symbol: 里
         convertExp: 500000 * val
         convertReverseExp: 0.000002 * val
       - name: zhang
         nameCn: 丈
-        symbol: zhang
+        symbol: 丈
         convertExp: 3333 * val
         convertReverseExp: 0.00030003 * val
       - name: chi
         nameCn: 尺
-        symbol: chi
+        symbol: 尺
         convertExp: 333.3 * val
         convertReverseExp: 0.0030003 * val
       - name: cun
         nameCn: 寸
-        symbol: cun
+        symbol: 寸
         convertExp: 33.33 * val
         convertReverseExp: 0.030003 * val
       - name: fen
         nameCn: 分
-        symbol: fen
+        symbol: 分
         convertExp: 3.333 * val
         convertReverseExp: 0.30003 * val
-      - name: li
+      - name: 厘
         nameCn: 厘
-        symbol: li
+        symbol: 厘
         convertExp: 0.3333 * val
         convertReverseExp: 3.00030003 * val
       - name: nautical mile
@@ -181,10 +181,10 @@ conf:
         convertReverseExp: 0.03937008 * val
   - name: temperature
     nameCn: 温度
-    code: t
+    code: tp
     convertDefault: °C
     units:
-      - name: centigrade
+      - name: celsius
         nameCn: 摄氏度
         symbol: °C
         convertExp: val
@@ -194,3 +194,18 @@ conf:
         symbol: °F
         convertExp: (val - 32) / 1.8
         convertReverseExp: 32 + val * 1.8
+      - name: kelvin
+        nameCn: 开氏度
+        symbol: K
+        convertExp: val + 273.15
+        convertReverseExp: val - 273.15
+      - name: rankine
+        nameCn: 兰氏度
+        symbol: °Ra
+        convertExp: val * 5 / 9 - 273.15
+        convertReverseExp: (val + 273.15) * 9 / 5
+      - name: reaumur
+        nameCn: 列氏度
+        symbol: °Re
+        convertExp:  1.25 * val
+        convertReverseExp: 0.8 * val
